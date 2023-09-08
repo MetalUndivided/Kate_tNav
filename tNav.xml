@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language name="tNavigator" section="Scientific" extensions="*.DATA;*.data" version="0.1" kateversion="2.4" author="zhivotikovip@gmail.com">
+    <highlighting>
+        <list name="sections">
+            <item>RUNSPEC</item>
+            <item>GRID</item>
+            <item>EDIT</item>
+            <item>PROPS</item>
+            <item>INIT</item>
+            <item>SOLUTION</item>
+            <item>SUMMARY</item>
+            <item>SCHEDULE</item>
+        </list>
+        <list name="ecl_kwds">
+            <item>AAQP</item>
+            <item>AAQR</item>
+        </list>
+        <contexts>
+            <context attribute="Normal Text" lineEndContext="#pop" name="Normal Text">
+                <keyword attribute="Section" context="#stay" String="sections" />
+                <keyword attribute="ECL Keyword" context="#stay" String="ecl_kwds" />
+            </context>
+        </contexts>
+        <itemDatas>
+            <itemData name="Normal Text" defStyleNum="dsNormal" />
+            <itemData name="Section" defStyleNum="dsKeyword" />
+            <itemData name="ECL Keyword" defStyleNum="dsBuiltIn" />
+        </itemDatas>
+    </highlighting>
+    <general>
+        <comments>
+            <comment name="singleLine" start="--" />
+            <comment name="multiLine" start="SKIP" end="ENDSKIP" region="CommentFolding" />
+        </comments>
+        <keywords casesensitive="1" />
+    </general>
+</language>
