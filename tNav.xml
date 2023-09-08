@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language name="tNavigator" section="Scientific" extensions="*.DATA;*.data" version="0.1" kateversion="2.4" author="zhivotikovip@gmail.com">
+<language name="tNavigator" section="Scientific" extensions="*.DATA;*.data;*.SCH;*.sch;*.INC;*.inc" version="0.1" kateversion="2.4" author="Ilya Zhivotikov (zhivotikovip@gmail.com)">
     <highlighting>
         <list name="sections">
             <item>RUNSPEC</item>
@@ -16,15 +16,28 @@
             <item>AAQR</item>
         </list>
         <contexts>
-            <context attribute="Normal Text" lineEndContext="#pop" name="Normal Text">
+            <context attribute="Normal Text" lineEndContext="#pop" name="Normal Text" >
+                <Detect2Chars attribute="Single Line Comment" context="sl_comment" char="-" char1="-" />
+                <StringDetect attribute="Multi Line Comment Beginning" context="ml_comment" String="SKIP" />
+                <DetectChar attribute="String" context="string" char="&#39;" />
                 <keyword attribute="Section" context="#stay" String="sections" />
                 <keyword attribute="ECL Keyword" context="#stay" String="ecl_kwds" />
+            </context>
+            <context attribute="Comment" lineEndContext="#pop" name="sl_comment">
+            </context>
+            <context attribute="Comment" lineEndContext="#stay" name="ml_comment">
+                <StringDetect attribute="Multi Line Comment End" context="#pop" String="ENDSKIP" />
+            </context>
+            <context attribute="String" lineEndContext="#pop" name="string">
+                <StringDetect attribute="String" context="#pop" String="&#39;" />
             </context>
         </contexts>
         <itemDatas>
             <itemData name="Normal Text" defStyleNum="dsNormal" />
-            <itemData name="Section" defStyleNum="dsKeyword" />
-            <itemData name="ECL Keyword" defStyleNum="dsBuiltIn" />
+            <itemData name="Comment" defStyleNum="dsComment" />
+            <itemData name="Section" defStyleNum="dsAttribute" />
+            <itemData name="ECL Keyword" defStyleNum="dsKeyword" />
+            <itemData name="String" defStyleNum="dsString" />
         </itemDatas>
     </highlighting>
     <general>
