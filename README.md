@@ -2,7 +2,7 @@
 
 A Kate XML file to enable tNavigator syntax highlighting.
 
-!(./demo/highlighting.png)
+![Demo](./demo/highlighting.png)
 
 ## Features
 
