@@ -2,7 +2,14 @@
 
 A Kate XML file to enable tNavigator syntax highlighting.
 
-----
+!(./demo/highlighting.png)
+
+## Features
+
+* full support for both the classic ECLIPSE and tNavigator keyword sets
+* semantics-based minimalistic highlighting style that utilizes default Kate styles
+* string highlighting
+* dynamic highlighting for UDQ variables and FIP family keywords
 
 ## Installation
 

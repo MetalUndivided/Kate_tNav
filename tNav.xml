@@ -2479,7 +2479,7 @@
                 <keyword attribute="ECL Keyword" context="#stay" String="ecl_kwds" />
                 <keyword attribute="tNav Keyword" context="#stay" String="tnav_kwds" />
                 <RegExpr attribute="ECL Keyword" context="#stay" String="FIP[A-Z]{0,5}" />
-                <keyword attribute="UDQ" context="#stay" String="udq" />
+                <keyword attribute="UDQ Definition" context="#stay" String="udq" />
                 <RegExpr attribute="UDQ" context="#stay" String="[FWGC]U[\w\d]{1,8}" />
             </context>
             <context attribute="Comment" lineEndContext="#pop" name="sl_comment">
@@ -2500,10 +2500,11 @@
             <itemData name="ECL Keyword" defStyleNum="dsKeyword" />
             <itemData name="tNav Keyword" defStyleNum="dsExtension" />
             <itemData name="String" defStyleNum="dsString" />
-            <itemData name="Action" defStyleNum="dsFunction" />
+            <itemData name="Action" defStyleNum="dsFunction" bold="true" />
+            <itemData name="UDQ Definition" defStyleNum="dsVariable" bold="true" />
             <itemData name="UDQ" defStyleNum="dsVariable" />
             <itemData name="Comment Marker" defStyleNum="dsCommentVar" />
-            <itemData name="Include" defStyleNum="dsImport" />
+            <itemData name="Include" defStyleNum="dsImport" bold="true" />
         </itemDatas>
     </highlighting>
     <general>
