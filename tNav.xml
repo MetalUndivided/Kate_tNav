@@ -2478,9 +2478,9 @@
                 <keyword attribute="Section" context="#stay" String="sections" />
                 <keyword attribute="ECL Keyword" context="#stay" String="ecl_kwds" />
                 <keyword attribute="tNav Keyword" context="#stay" String="tnav_kwds" />
-                <RegExpr attribute="ECL Keyword" context="#stay" String="FIP[A-Z]{0,5}" />
+                <RegExpr attribute="ECL Keyword" context="#stay" String="FIP[A-Z0-9]{0,3}" />
                 <keyword attribute="UDQ Definition" context="#stay" String="udq" />
-                <RegExpr attribute="UDQ" context="#stay" String="[FWGC]U[\w\d]{1,8}" />
+                <RegExpr attribute="UDQ" context="#stay" String="[FWGCRT]U[\w\d]{1,6}" />
             </context>
             <context attribute="Comment" lineEndContext="#pop" name="sl_comment">
             </context>
